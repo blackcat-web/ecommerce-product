@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/image-product-1-thumbnail.jpg">
+  <title>E-commerce product page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="lightBox" id="lightBox">
+    <div class="light_box_close" >
+      <div class="closelogo" onclick="document.getElementById('lightBox').style='display:none; !important'">
+        <span class="close_sec"></span>
+      </div>
+    </div>
+    <div class="images">
+      <div class="pre_btn" id="previous" onclick="preImage()">
+        <div class="mask1">
+          <div class="previous"></div>
+        </div>
+      </div>
+      <img src="./images/image-product-1.jpg" alt="products" id="lightboxproduct">
+      <div class="post_btn" id="next" onclick="nextImage()">
+        <div class="mask2">
+          <div class="next"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <nav class="navbar" role="navigation">
+      <div class="nav_left_content">
+        <img src="./images/icon-menu.svg" alt="menu" class="burger" id="burger">
+        <img class="logo" src="./images/logo.svg" alt="site logo">
+
+        <ul class="navlist" id="navlist">
+          <li class="closeMenu"><img src="./images/icon-close.svg" alt="close menu" id="closeMenu"></li>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="userPhase">
+        <div class="navCart">
+          <div id="cart">
+            <span id="numOfItem"></span>
+            <img src="./images/icon-cart.svg" alt="cart logo" id="cartLogo">
+          </div>
+          <div class="Selected_item" id="itemSec">
+            <p>Cart</p>
+            <hr>
+            <div id="CartEmpt">
+              <div class="added_item">
+                <img src="./images/image-product-1-thumbnail.jpg" alt="product image">
+                <p>Fall Limited Edition sneakers $125.00 x <span id="noproduct">0</span> <span id="totalP">$00.00</span>
+                </p>
+                <img src="./images/icon-delete.svg" alt="icon-delete" class="iconDelete" id="drop">
+              </div>
+              <button class="btn-sn">checkout</button>
+            </div>
+          </div>
+        </div>
+        <img class="avtar" src="./images/image-avatar.png" alt="user Dp">
+      </div>
+
+    </nav>
+    <hr id="lineA">
+    <div class="wrapper" onclick="document.getElementById('itemSec').style='display:none;'">
+      <div class="showcase">
+        <div class="main_img" id="mainImageBox"
+          onclick="document.getElementById('lightBox').style='display:flex !important ;'">
+          <img src="./images/image-product-1.jpg" alt="product image" id="product">
+        </div>
+        <div class="slidBOx">
+          <div class="slid_imgs" onclick="ChangeImg(0,0)">
+            <img src="./images/image-product-1-thumbnail.jpg" alt="thumbnail-1" id="thumImage">
+            <span class="overlay overlayBox"></span>
+          </div>
+          <div class="slid_imgs" onclick="ChangeImg(1,1)">
+            <img src="./images/image-product-2-thumbnail.jpg" alt="thumbnail-2" id="thumImage">
+            <span class="overlayBox"></span>
+          </div>
+          <div class="slid_imgs" onclick="ChangeImg(2,2)">
+            <img src="./images/image-product-3-thumbnail.jpg" alt="thumbnail-3" id="thumImage">
+            <span class="overlayBox"></span>
+          </div>
+          <div class="slid_imgs" onclick="ChangeImg(3,3)">
+            <img src="./images/image-product-4-thumbnail.jpg" alt="thumbnail-4" id="thumImage">
+            <span class="overlayBox"></span>
+          </div>
+        </div>
+      </div>
+      <div class="details">
+        <p>sneaker Company</p>
+        <p>Fall Limited Edition sneakers</p>
+        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <div class="price">
+          <div>
+            <span id="cost">$125.00</span>
+            <span id="perDis">50%</span>
+          </div>
+          <p id="beforeDis"> $250.00 </p>
+        </div>
+        <div class="AddSec">
+          <div class="Add_sub">
+            <img src="./images/icon-minus.svg" alt="minus" id="minus" onclick="Decrease()">
+            <span id="addItem" style="font-size: 20px;">0</span>
+            <img src="./images/icon-plus.svg" alt="plus" id="plus" onclick="Increase()">
+          </div>
+          <button class="btn" id="btn">
+            <img src="./images/icon-cart.svg" alt="cart">
+            Add to cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
